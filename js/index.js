@@ -55,6 +55,21 @@ Links[4].textContent = siteContent.nav["nav-item-5"];
 Links[5].textContent = siteContent.nav["nav-item-6"];
 console.log(Links);
 
+let newLinks = document.querySelectorAll("a");
+newLinks.forEach(element => {element.style.color = "green"});
+
+const navItem1 = document.createElement("a");
+navItem1.textContent = "Home";
+navItem1.style.color = "green";
+
+const navItem2 = document.createElement("a");
+navItem2.textContent = "Review";
+navItem2.style.color = "green";
+
+const newNav = document.querySelector("nav");
+newNav.prepend(navItem1);
+newNav.appendChild(navItem2);
+
 let textCta = document.querySelector(".cta-text h1");
 textCta.textContent = siteContent["cta"]["h1"]; 
 console.log(textCta);
